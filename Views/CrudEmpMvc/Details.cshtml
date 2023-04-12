@@ -1,0 +1,58 @@
+﻿@model WebApi.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Gender")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Age")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_age)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Designation")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_designation)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Salary")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Salary)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { Emp_id = Model.Emp_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

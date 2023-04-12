@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApi_CrudModelStoreContainer" CdmEntityContainer="WebApi_CrudEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="WebApi_CrudModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Emp_id" ColumnName="Emp_id" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Emp_gender" ColumnName="Emp_gender" />
+          <ScalarProperty Name="Emp_age" ColumnName="Emp_age" />
+          <ScalarProperty Name="Emp_designation" ColumnName="Emp_designation" />
+          <ScalarProperty Name="Emp_Salary" ColumnName="Emp_Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

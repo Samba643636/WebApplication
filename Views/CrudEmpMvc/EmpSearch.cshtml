@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebApi.Models.Employee>
+
+@{
+    ViewBag.Title = "Employee Search";
+}
+
+<h2>Employee Search</h2>
+@if (ViewBag.message == null)
+{
+<table class="table">
+    <tr>
+        <th>
+            EmpID
+        </th>
+        <th>
+            EmpName
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Designation
+        </th>
+        <th>
+            Salary
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_designation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_Salary)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { Emp_id = item.Emp_id }) |
+                @Html.ActionLink("Details", "Details", new { Emp_id = item.Emp_id }) |
+                @Html.ActionLink("Delete", "Delete", new { Emp_id = item.Emp_id })
+            </td>
+        </tr>
+    }
+
+</table>  }
+            else
+            {
+                <div style="color:red;border-color:black"><h2>No records found</h2></div>
+            }
+<p>
+    
+    @Html.ActionLink("Back to List", "Index")
+</p>
